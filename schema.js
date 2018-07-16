@@ -1,17 +1,6 @@
 const { buildSchema } = require('graphql')
 
 module.exports = new buildSchema(`
-  type Student {
-    _id: Int!
-    name: String!
-    scores: [Scores]
-  }
-
-    type Scores{
-        score: Float,
-        type:String
-    }
-
     type User{
       _id: [String],
       username: String!,

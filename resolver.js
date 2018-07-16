@@ -1,15 +1,6 @@
 const models = require('./models/student')
 
 const resolvers = {
-  hello: (args, context) => {
-    return context.greeting
-  },
-  students: async (args, context) => {
-    return (await models.Student.find())
-  },
-  student: async(args,context) => {
-    return (await Student.find({"_id":args._id}))
-  },
   users: async (args) =>{
       return (await models.User.find())
   },

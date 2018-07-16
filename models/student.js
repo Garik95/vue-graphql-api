@@ -1,14 +1,7 @@
 const mongoose = require('mongoose')
 
 // Mongoose Model
-const studentSchema = new mongoose.Schema({
-     _id: Number,
-    name: String,
-  scores: Array
-})
-var Student = mongoose.model('Student', studentSchema);
-module.exports = Student;
-
+// User schema
 const userSchema = new mongoose.Schema({
     _id: Array,
     username: String,
@@ -19,6 +12,7 @@ const userSchema = new mongoose.Schema({
 var User = mongoose.model('User', userSchema);
 module.exports = User;
 
+// Cover schema
 const coverSchema = new mongoose.Schema({
     id: Number,
     name: String
@@ -26,6 +20,7 @@ const coverSchema = new mongoose.Schema({
 
 var Cover = mongoose.model('Cover', coverSchema);
 
+// Card schema
 const cardSchema = new mongoose.Schema({
     _id: Array,
     userid: String,
@@ -36,7 +31,8 @@ const cardSchema = new mongoose.Schema({
 })
 
 var Card = mongoose.model('Card',cardSchema);
-// Export Mongoose "Book" model
+
+// Export Mongoose models
 module.exports = {
     Student:Student,
     User:User,
