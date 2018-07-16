@@ -23,7 +23,7 @@ var Cover = mongoose.model('Cover', coverSchema);
 // Card schema
 const cardSchema = new mongoose.Schema({
     _id: Array,
-    userid: String,
+    userid: {type: ObjectId, ref: 'userSchema'},
     account: String,
     sum: Number,
     state: Boolean,
