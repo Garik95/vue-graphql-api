@@ -30,7 +30,7 @@ const cardSchema = new mongoose.Schema({
     _id: Array,
     userid: String,
     account: String,
-    sum: Float32Array,
+    sum: Number,
     state: Boolean,
     cover: String
 })
