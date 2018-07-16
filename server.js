@@ -1,6 +1,7 @@
 const express = require('express')
 const graphqlHTTP = require('express-graphql')
 const mongoose = require('mongoose')
+const port = process.env.port;
 
 // Import GraphQL components
 const schema = require('./schema')
@@ -18,5 +19,5 @@ app.use('/graphql', graphqlHTTP({
   graphiql: true
 }))
 
-app.listen(4000);
-console.log('Running a GraphQL API server at localhost:4000/graphql')
+app.listen(port);
+console.log('Running a GraphQL API server at localhost:' + port + '/graphql')
