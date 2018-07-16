@@ -1,4 +1,4 @@
-const Student = require('./models/student')
+const models = require('./models/student')
 
 const resolvers = {
   hello: (args, context) => {
@@ -11,7 +11,7 @@ const resolvers = {
     return (await Student.find({"_id":args._id}))
   },
   users: async (args) =>{
-      return (await Users.find())
+      return (await models.Users.find())
   }
 //   addBook: async (args, context) => {
 //     var newBook = new Book({
