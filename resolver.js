@@ -18,6 +18,12 @@ const resolvers = {
   },
   covers: async (args) => {
     return (await models.Cover.find())
+  },
+  card: async (args) => {
+    return (await models.Cards.find({"account":args.account}))
+  },
+  cards: async (args) => {
+    return (await models.Cards.find({"userid":args.userid}))
   }
 //   addBook: async (args, context) => {
 //     var newBook = new Book({

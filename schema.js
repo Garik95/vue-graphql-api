@@ -11,6 +11,7 @@ module.exports = new buildSchema(`
         score: Float,
         type:String
     }
+
     type User{
       _id: [String],
       username: String!,
@@ -22,14 +23,26 @@ module.exports = new buildSchema(`
       id: Int!,
       name: String
     }
-  type Query {
-    hello: String
-    students: [Student]
-    student(_id:Int!): [Student]
-    users: [User]
-    user(username:String!): [User]
-    covers: [Cover]
-  }
+
+    type Card{
+      _id: [String],
+      userid: String,
+      account: String!,
+      sum: Float,
+      state: Boolean,
+      cover:String
+    }
+
+    type Query {
+      hello: String
+      students: [Student]
+      student(_id:Int!): [Student]
+      users: [User]
+      user(username:String!): [User]
+      covers: [Cover]
+      card(account:String!): [Card]
+      cards(userid:String!): [Card]
+    }
 
   `)
     //   type Mutation {

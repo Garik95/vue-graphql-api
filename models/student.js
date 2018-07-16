@@ -26,9 +26,20 @@ const coverSchema = new mongoose.Schema({
 
 var Cover = mongoose.model('Cover', coverSchema);
 
+const cardSchema = new mongoose.Schema({
+    _id: Array,
+    userid: String,
+    account: String,
+    sum: Float32Array,
+    state: Boolean,
+    cover: String
+})
+
+var Card = mongoose.model('Card',cardSchema);
 // Export Mongoose "Book" model
 module.exports = {
     Student:Student,
     User:User,
-    Cover:Cover
+    Cover:Cover,
+    Card:Card
 }
