@@ -6,6 +6,18 @@ const studentSchema = new mongoose.Schema({
     name: String,
   scores: Array
 })
+var Student = mongoose.model('Student', studentSchema);
+module.exports = Student;
+
+const userSchema = new mongoose.Schema({
+    username: String,
+    password: String
+})
+var User = mongoose.model('User', userSchema);
+module.exports = User;
 
 // Export Mongoose "Book" model
-module.exports = mongoose.model('Student', studentSchema)
+module.exports = {
+    Student:studentSchema,
+    User:userSchema
+}

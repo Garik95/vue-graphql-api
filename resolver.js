@@ -9,6 +9,9 @@ const resolvers = {
   },
   student: async(args,context) => {
     return (await Student.find({"_id":args._id}))
+  },
+  users: async (args) =>{
+      return (await Users.find())
   }
 //   addBook: async (args, context) => {
 //     var newBook = new Book({
