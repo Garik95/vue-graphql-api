@@ -14,7 +14,9 @@ module.exports = new buildSchema(`
 
     type User{
       username: String!,
-      password: String
+      password: String,
+      first_name: String,
+      second_name: String
     }
     type Cover{
       id: Int!,
