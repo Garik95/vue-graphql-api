@@ -17,7 +17,7 @@ const resolvers = {
       return (await models.User.find({"username":args.username}))
   },
   covers: async (args) => {
-    return (await models.Covers.find())
+    return (await models.Cover.find())
   }
 //   addBook: async (args, context) => {
 //     var newBook = new Book({
