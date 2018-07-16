@@ -20,6 +20,7 @@ module.exports = new buildSchema(`
     students: [Student]
     student(_id:Int!): [Student]
     users: [User]
+    user(username:String!): [User]
   }
 
   `)
