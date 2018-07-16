@@ -5,7 +5,7 @@ const resolvers = {
     return context.greeting
   },
   students: async (args, context) => {
-    return (await Student.find())
+    return (await models.Student.find())
   },
   student: async(args,context) => {
     return (await Student.find({"_id":args._id}))

@@ -18,6 +18,6 @@ module.exports = User;
 
 // Export Mongoose "Book" model
 module.exports = {
-    Student:studentSchema,
-    User:userSchema
+    Student:Student,
+    User:User
 }
