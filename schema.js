@@ -11,9 +11,14 @@ module.exports = new buildSchema(`
         score: Float,
         type:String
     }
+
     type User{
-        username: String!,
-        password: String
+      username: String!,
+      password: String
+    }
+    type Cover{
+      id: Int!,
+      name: String
     }
   type Query {
     hello: String
@@ -21,6 +26,7 @@ module.exports = new buildSchema(`
     student(_id:Int!): [Student]
     users: [User]
     user(username:String!): [User]
+    covers: [Cover]
   }
 
   `)

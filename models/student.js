@@ -16,8 +16,16 @@ const userSchema = new mongoose.Schema({
 var User = mongoose.model('User', userSchema);
 module.exports = User;
 
+const coverSchema = new mongoose.Schema({
+    id: Number,
+    name: String
+})
+
+var Cover = mongoose.model('Cover', coverSchema);
+
 // Export Mongoose "Book" model
 module.exports = {
     Student:Student,
-    User:User
+    User:User,
+    Cover:Cover
 }
