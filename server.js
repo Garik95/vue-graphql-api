@@ -1,4 +1,5 @@
 const express = require('express')
+var cors = require('cors')
 const graphqlHTTP = require('express-graphql')
 const mongoose = require('mongoose')
 const host = process.env.IP;
@@ -14,6 +15,7 @@ mongoose.connect(dbURL + '/' + dbName)
 
 // Set up Express server
 const app = express()
+app.use(cors())
 app.use('/graphql', graphqlHTTP({
   schema: schema,
   rootValue: resolvers,
