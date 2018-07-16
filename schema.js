@@ -11,11 +11,8 @@ module.exports = new buildSchema(`
         score: Float,
         type:String
     }
-    type Oid{
-      $oid: String
-    }
     type User{
-      _id: [Oid],
+      _id: String,
       username: String!,
       password: String,
       first_name: String,
