@@ -8,24 +8,24 @@ module.exports = new buildSchema(`
       first_name: String,
       second_name: String
     }
+
     type Cover{
       id: Int!,
       name: String
     }
 
     type Card{
-      _id: [String],
+      _id: String,
       userid: String,
       account: String!,
       sum: Float,
       state: Boolean,
-      cover:String
+      cover: String,
+      users: [User]
     }
 
     type Query {
       hello: String
-      students: [Student]
-      student(_id:Int!): [Student]
       users: [User]
       user(username:String!): [User]
       covers: [Cover]
