@@ -1,5 +1,8 @@
 const mongoose = require('mongoose')
 
+var Schema = mongoose.Schema,
+    ObjectId = Schema.ObjectId;
+
 // Mongoose Model
 // User schema
 const userSchema = new mongoose.Schema({
@@ -34,7 +37,6 @@ var Card = mongoose.model('Card',cardSchema);
 
 // Export Mongoose models
 module.exports = {
-    Student:Student,
     User:User,
     Cover:Cover,
     Card:Card
