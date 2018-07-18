@@ -6,7 +6,18 @@ const resolvers = {
       return (await models.User.find())
   },
   user: async (args) => {
-      return (await models.User.find({"username":args.username}))
+      // return (await models.User.find({"username":args.username}))
+      return (await models.User.aggregate([
+        {$match:{"username":args.username}},
+        {
+        $lookup:{
+                from: "cards",
+                localField: "_id",
+                foreignField: "userid",
+                as: "cards"
+            }
+      }])
+      )
   },
   covers: async (args) => {
     return (await models.Cover.find())

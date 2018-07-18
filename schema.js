@@ -6,7 +6,8 @@ module.exports = new buildSchema(`
       username: String!,
       password: String,
       first_name: String,
-      second_name: String
+      second_name: String,
+      cards: [Card]
     }
 
     type Cover{
